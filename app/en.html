@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<!-- <script src="js/vendor/jquery-1.12.0.min.js"></script> -->
+    <!-- <script src="js/main.js"></script> -->
+	<!-- <script src="js/vendor/covervid.min.js"></script> -->
+
+</head>
+<body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <!-- Add your site or application content here -->
+            <div class="wrapper">
+            	<div class="wrapper__block agency">
+            		<div class="wrapper__block-coloroverlay"></div>
+    				<video preload loop muted poster="img/transparent.png" class="agency__video">
+						<source src="video/people.mp4" type="video/mp4">
+					</video>
+                    <div class="mobile-top">
+                        <div class="mobile-top__logo">
+                            <p><a href="#"><u>U</u>nilead</a></p>
+                        </div>
+                        <div class="mobile-top__lang lang">
+                            <p><a href="index.html">Ru</a>&nbsp;&nbsp;&nbsp;<a href="en.html" class="current">En</a></p>
+                        </div>
+                    </div>
+            		<div class="top agency__element">
+            			<!-- <img src="img/logo_unilead.png" alt="Unilead logo"> -->
+            			<p class="top__logo"><a href="/"><u>U</u>nilead</a></p>
+            		</div>
+            		<div class="content agency__element">
+            			<p class="content__title"><a href="http://agency.unilead.net/en">Agency</a></p>
+            			<a class="content__button" href="http://agency.unilead.net/en">&rarr;</a>
+            		</div>
+            		<div class="footer agency__element">
+            			<p>&nbsp;</p>
+            		</div>
+            	</div>
+            	<div class="wrapper__block network">
+            		<div class="wrapper__block-coloroverlay"></div>
+    				<video id="network_video" preload loop muted poster="img/transparent.png" class="network__video">
+						<source src="video/night.mp4" type="video/mp4">
+					</video>
+            		<div class="top network__element">
+            			<p>WE SURPASS<br>EXPECTATIONS</p>
+            		</div>
+            		<div class="content network__element">
+            			<div class="content__title"><a href="http://www.unileadnetwork.com/en/">Network</a></div>
+            			<a class="content__button" href="http://www.unileadnetwork.com/en/">&rarr;</a>
+            		</div>
+            		<div class="footer network__element">
+            			<p>&nbsp;</p>
+            		</div>
+            	</div>
+            	<div class="wrapper__block news">
+            		<div class="wrapper__block-coloroverlay"></div>
+    				<video id="news_video" preload loop muted poster="img/transparent.png" class="news__video">
+						<source src="video/man.mp4" type="video/mp4">
+					</video>
+            		<div class="top news__element lang">
+            			<p><a href="index.html">Ru</a>&nbsp;&nbsp;&nbsp;<a href="en.html" class="current">En</a></p>
+            		</div>
+            		<div class="content news__element">
+            			<p class="content__title"><a href="http://news.unilead.net/en/">News</a></p>
+            			<a class="content__button" href="http://news.unilead.net/en/">&rarr;</a>
+            		</div>
+            		<div class="footer news__element">
+            			<p>2011-2017, Unilead &reg;</p>
+            		</div>
+            	</div>
+
+                <div class="wrapper__block mobile-footer">
+                    <div class="mobile-footer__content">
+                        <p>2011-2017, Unilead &reg;</p>
+                    </div>
+                    <div><img class="mobile-footer__logo" src="img/footer_bg.png" ></div>
+                </div>
+            </div>
+<!--             <script type="text/javascript">
+				// If using jQuery
+					// $('.masthead-video').coverVid(1920, 1080);
+				// If not using jQuery (Native Javascript)
+				coverVid(document.querySelector('.masthead-video'), 640, 360);
+			</script> -->
+
+
+            <script type="text/javascript">  
+                window.onload = function() { //executes this code after the DOM loads
+                   //--- this is the selector element. Feel free to change this if you don't want all video objects targeted.
+                  const vids = document.getElementsByTagName(`video`);
+
+                  for (let i = 0; i < vids.length; i++) {
+                  vids[i].play();
+                   }
+                  setTimeout(function(){
+                        for (let i = 0; i < vids.length; i++) {
+                  vids[i].pause();
+                   }
+                    },400);
+
+                   //--- Now we loop over all of the selected elements and add event listeners
+                  for (let i = 0; i < vids.length; i++) {
+                    vids[i].parentElement.addEventListener( `mouseover`, function(e) { 
+                      vids[i].play();
+                    })
+                    vids[i].parentElement.addEventListener( `mouseout`, function(e) {
+                      vids[i].pause();
+                    })
+                  }
+                }
+            </script> 
+        </body>
+        </html>

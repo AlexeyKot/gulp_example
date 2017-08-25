@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url("../fonts/bebas-neue-bold.ttf") format("truetype"); }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+p {
+  margin: 0; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Main page styles
+   ========================================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Bebas Neue Bold', sans-serif;
+  text-transform: uppercase; }
+
+.wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  height: 100vh;
+  color: white; }
+  .wrapper a {
+    color: white;
+    text-decoration: none; }
+  .wrapper__block {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden; }
+    .wrapper__block-coloroverlay {
+      background-color: rgba(0, 0, 0, 0.41);
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+      min-width: 101%;
+      min-height: 100%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
+.agency {
+  background: transparent url("../img/video-posters/people.jpg") no-repeat 0 0;
+  background-size: cover;
+  background-position: center center; }
+  .agency__element {
+    margin-left: 40%; }
+  .agency__video {
+    background-size: cover; }
+
+.network {
+  background: transparent url("../img/video-posters/night.jpg") no-repeat 0 0;
+  background-size: cover;
+  background-position: center center; }
+  .network__element {
+    margin-left: 25%; }
+  .network__video {
+    background-size: cover; }
+
+.news {
+  background: transparent url("../img/video-posters/man.jpg") no-repeat 0 0;
+  background-size: cover;
+  background-position: center center; }
+  .news__element {
+    margin-left: 25%; }
+  .news__video {
+    background-size: cover; }
+
+.top {
+  height: 150px;
+  z-index: 1;
+  font-size: 1.5vw;
+  margin-top: 7%; }
+  .top__logo {
+    font-size: 3.5vw; }
+
+.content {
+  z-index: 1; }
+  .content__title {
+    margin: 0;
+    font-size: 4.5vw;
+    line-height: 4.5vw; }
+  .content__button {
+    font-size: 2vw;
+    background: transparent;
+    border: 4px solid;
+    padding: 4px 20px; }
+    .content__button:hover {
+      border-width: 8px;
+      padding: 0 16px; }
+
+.footer {
+  z-index: 1;
+  margin-bottom: 7%;
+  font-size: 1.5vw; }
+
+.lang a {
+  color: #bfbec2; }
+  .lang a.current, .lang a:hover {
+    color: white; }
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.mobile-top {
+  display: none; }
+
+.mobile-footer {
+  display: none; }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column; }
+    .wrapper__block {
+      min-height: 40vh; }
+  .content {
+    margin-top: auto;
+    margin-bottom: 6%; }
+    .content__title {
+      font-size: 14vw;
+      line-height: 12vw; }
+    .content__button {
+      font-size: 5vw; }
+  .agency__element {
+    margin-left: 15%; }
+  .news__element {
+    margin-left: 15%; }
+  .network__element {
+    margin-left: 15%; }
+  .top {
+    display: none; }
+  .footer {
+    display: none; }
+  video {
+    display: none; }
+  .mobile-top {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    z-index: 1;
+    font-size: 8vw; }
+    .mobile-top__logo {
+      margin-left: 6%;
+      margin-top: 5%; }
+    .mobile-top__lang {
+      margin-right: 6%;
+      margin-top: 5%; }
+  .mobile-footer {
+    display: inherit;
+    min-height: 40vw; }
+    .mobile-footer__content {
+      color: #27262b;
+      margin-left: 6%;
+      margin-top: 5%; }
+    .mobile-footer__logo {
+      max-width: 100%; } }

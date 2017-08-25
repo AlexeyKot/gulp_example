@@ -1,0 +1,351 @@
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: url('../fonts/bebas-neue-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+$border-line: 1px solid #d4d9dd;
+$bulb-border-radius: 5px;
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+p {
+	margin: 0;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Main page styles
+   ========================================================================== */
+
+html,body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Bebas Neue Bold', sans-serif;
+	text-transform: uppercase;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	height:100vh;
+	color: white;
+
+	& a {
+		color: white;
+		text-decoration: none;
+	}
+
+	&__block {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		// align-items: flex-start;
+		position: relative;
+		overflow: hidden;
+
+		&-coloroverlay {
+			background-color: rgba(0, 0, 0, 0.41);
+			z-index: 1;
+			position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    width: auto;
+		    height: auto;
+		    min-width: 101%;
+		    min-height: 100%;
+		    -webkit-transform: translate(-50%, -50%);
+	        -moz-transform: translate(-50%, -50%);
+	        -ms-transform: translate(-50%, -50%);
+		    transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.agency {
+	background:transparent url('../img/video-posters/people.jpg') no-repeat 0 0;
+    background-size: cover;
+    background-position: center center;
+
+    &__element {
+    	margin-left: 40%;
+    }
+
+    &__video { 
+	   // background:transparent url('../img/video-posters/people.jpg') no-repeat 0 0; 
+	   -webkit-background-size:cover; 
+	   -moz-background-size:cover; 
+	   -o-background-size:cover; 
+	   background-size:cover; 
+    }
+}
+
+.network {
+	background:transparent url('../img/video-posters/night.jpg') no-repeat 0 0; 
+	background-size: cover;
+    background-position: center center;
+
+    &__element {
+    	margin-left: 25%;
+    }
+
+    &__video { 
+	   // background:transparent url('../img/video-posters/night.jpg') no-repeat 0 0; 
+	   -webkit-background-size:cover; 
+	   -moz-background-size:cover; 
+	   -o-background-size:cover; 
+	   background-size:cover; 
+    }
+}
+
+.news {
+	background:transparent url('../img/video-posters/man.jpg') no-repeat 0 0; 
+	background-size: cover;
+    background-position: center center;
+    &__element {
+    	margin-left: 25%;
+    }
+
+    &__video { 
+	   // background:transparent url('../img/video-posters/man.jpg') no-repeat 0 0; 
+	   -webkit-background-size:cover; 
+	   -moz-background-size:cover; 
+	   -o-background-size:cover; 
+	   background-size:cover; 
+    }
+}
+
+.top {
+	height: 150px;
+	z-index: 1;
+	font-size: 1.5vw;
+	margin-top: 7%;
+
+	&__logo {
+		font-size: 3.5vw;
+	}
+
+}
+
+.content {
+	z-index: 1;
+	&__title {
+		margin: 0;
+		font-size: 4.5vw;
+		line-height: 4.5vw;
+	}
+
+	&__button {
+		font-size: 2vw;
+		background: transparent;
+		border: 4px solid;
+		padding: 4px 20px;
+
+		&:hover {
+			border-width: 8px;
+			padding: 0 16px;
+		}
+	}
+}
+
+.footer {
+	// height: 20px;
+	z-index: 1;
+	margin-bottom: 7%;
+	font-size: 1.5vw;
+}
+
+.lang {
+	& a {
+		color: #bfbec2;
+		&.current, &:hover {
+			color: white;
+		}
+	}
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	// z-index: 0;
+}
+
+.mobile-top {
+	display: none;
+}
+
+.mobile-footer {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .wrapper {
+    	flex-direction: column;
+    	// color: #27262b;
+
+    	&__block {
+    		min-height: 40vh;
+    	}
+    }
+
+    .content {
+    	margin-top: auto;
+    	margin-bottom: 6%;
+    	&__title {
+    		font-size: 14vw;
+    		line-height: 12vw;
+    	}
+
+    	&__button {
+    		font-size: 5vw;
+    	}
+    }
+
+    .agency {
+    	&__element {
+    		margin-left: 15%;
+    	}
+    }
+
+    .news {
+    	&__element {
+    		margin-left: 15%;
+    	}
+    }
+
+    .network {
+    	&__element {
+    		margin-left: 15%;
+    	}
+    }
+
+    .top {
+    	display: none;
+    }
+
+    .footer {
+    	display: none;
+    }
+
+    video {
+    	display: none;
+    }
+
+    .mobile-top {
+    	display: flex;
+    	justify-content: space-between;
+    	z-index: 1;
+    	font-size: 8vw;
+
+    	&__logo {
+    		margin-left: 6%;
+    		margin-top: 5%;
+    	}
+
+    	&__lang {
+    		margin-right: 6%;
+    		margin-top: 5%;
+    	}
+    }
+
+    .mobile-footer {
+    	display: inherit;
+    	min-height: 40vw;
+
+    	&__content {
+    		color: #27262b;
+    		margin-left: 6%;
+    		margin-top: 5%;
+    	}
+
+    	&__logo {
+    		max-width: 100%;
+    	}
+    }
+
+}
